@@ -1,0 +1,35 @@
+.home-page {
+    height: 100vh;
+    // background-image: url('../../Common/Assets/Images/welcome.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background: url('../../Common/Assets/Images/welcome.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-page{
+    .btn-admin{
+        bottom: 370px;
+        position: fixed;
+        width: 150px;
+    }
+    .btn-player{
+        bottom: 300px;
+        position: fixed;
+        width: 150px;
+    }
+    .btn-instructor{
+        bottom: 230px;
+        position: fixed;
+        width: 150px;
+    }
+    .btn-parent{
+        bottom: 160px;
+        position: fixed;
+        width: 150px;
+    }
+}

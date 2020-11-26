@@ -1,0 +1,60 @@
+node() {
+
+    stage('Cloning Git') {
+        checkout scm
+    }
+
+    stage('Frontend Install dependencies') {   
+      
+        nodejs('nodejs') {  
+            sh '''
+                #!/bin/bash
+                cd /var/lib/jenkins/workspace/front-end/front/
+                npm install
+                '''          
+            echo "Modules installed"
+        }
+    }
+
+    stage('Frontend Build dependencies') {
+        nodejs('nodejs') {
+            sh '''
+                #!/bin/bash
+                rm -rf /var/lib/jenkins/workspace/front-end/front/build/
+                cd /var/lib/jenkins/workspace/front-end/front/
+                npm run build
+                '''  
+            echo "Modules Build"
+        }
+    }
+
+    stage('Frontend Configrations') {
+        nodejs('nodejs') {
+            sh '''
+                #!/bin/bash
+                cp /var/lib/jenkins/workspace/front-end/front/.htaccess  /var/lib/jenkins/workspace/front-end/front/build/.htaccess
+                '''  
+            echo "Modules Build"
+        }
+    }
+
+    stage('Install backend dependencies') {
+        sh '''
+            #!/bin/bash
+            rm -rf /var/lib/jenkins/workspace/front-end/backend/vendor/
+            cd /var/lib/jenkins/workspace/front-end/backend/
+            composer install
+            '''          
+        echo "Backend Composer Installed"        
+    }
+
+    stage('Backend Configrations') {
+        sh '''
+            cd /var/lib/jenkins/workspace/front-end/backend/
+            php artisan key:generate
+            php artisan passport:install
+            php artisan passport:keys --force
+            '''
+        echo "Backend Configuratoins has done" 
+    }
+}

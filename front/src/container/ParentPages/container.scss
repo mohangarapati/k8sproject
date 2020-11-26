@@ -1,0 +1,147 @@
+.admin-page{
+    .dashboard-page{
+        .bg-card{
+            background-color: #3f0235;
+            height: 300px;
+        }
+
+        .pie-card{
+            background-color: #572247;
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    .page-headers, .page-headers1{
+        background-image: linear-gradient(to right,#3F0235, #2B5686);
+        width: 100%;
+    }
+
+
+    .page-headers{
+        height: 350px;
+    }
+    
+    .page-headers1{
+        height: 300px;
+    }
+    
+    .page-headers p{
+        color: white;
+    }
+    
+    .page-headers a{
+        color: greenyellow !important;
+    }
+    
+    p.page-title{
+        color: white;
+    }
+    
+    .bg-purple{
+        background-color: #1F5377 !important;
+    }
+    
+    .full-card{
+        height: calc(100vh - 90px);
+        overflow: auto;
+    }
+
+    .bg-card{
+        background-color: #3f0235;
+        height: 200px;
+    }
+
+    .round-card{
+        border-radius: 150px 0px 0px 150px;
+    }
+
+    .dropdown-menu-header .menu-header-content {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .form-field__text-input, .form-field__select, .form-field__datepicker, .form-field__timepicker, .css-lfwufy-control, .css-yk16xz-control{
+        border-radius: 25px !important;
+        height: 45px;
+    }
+
+    .form-field__select span{
+        display: none !important;
+    }
+
+    .login-card{
+        height: calc(100vh - 390px);
+        overflow-y: auto;
+    }
+
+    .badge_grade_status_quite{
+        background-color: #D2511F !important;
+    }
+
+    .badge_grade_status_trail{
+        background-color: #4585D2 !important;
+    }
+
+    .badge_grade_status_enrolled{
+        background-color: #6EB421 !important;
+    }
+    
+    .badge_grade_status_Paid{
+        background-color: #6EB421 !important;
+    }
+
+    .badge_grade_status_Error{
+        background-color: #D2511F !important;
+    }
+
+    .badge_active_status_Inactive{
+        background-color: #6e6b6a !important;
+    }
+
+    .badge_active_status_Trial{
+        background-color: #cef108 !important;
+    }
+
+    .auth-page {
+        .form-field__text-input, .form-field__select, .form-field__datepicker, .form-field__timepicker, .css-lfwufy-control, .css-yk16xz-control{
+            border-radius: 0px !important;
+            background-color: #F6F7B2;
+            
+        }   
+
+        button {
+            background-image: linear-gradient(to bottom, #802BDB 52%, #000000);
+        }
+
+        .form-field{
+            padding: 0px
+        }
+
+        .form-field__text-input{
+            margin-top: 0px !important;
+        }
+
+        .input-group-text{
+            background-color: #F6F7B2;
+        }
+    }
+
+    .sc-fzoxKX label{
+        margin-bottom: 0px;
+    }
+
+   
+    
+    @media (max-width: 798px){
+        .full-card {
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .profile-image {
+            order: -1;
+        }
+    }
+}
+
