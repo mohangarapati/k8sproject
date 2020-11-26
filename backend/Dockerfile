@@ -44,7 +44,8 @@ RUN  mkdir -p storage/framework/sessions
   
 RUN mkdir -p storage/framework/views 
 RUN mkdir -p storage/framework/cache && chown -R www-data:www-data /var/www/myapp &&  /usr/bin/composer install 
-RUN /usr/local/bin/php artisan key:generate && /usr/local/bin/php artisan config:cache && /usr/local/bin/php artisan passport:install --force && /usr/local/bin/php artisan passport:keys --force && php-fpm
 
 EXPOSE 8080
+
+CMD /usr/local/bin/php artisan key:generate && /usr/local/bin/php artisan config:cache && /usr/local/bin/php artisan passport:install --force && /usr/local/bin/php artisan passport:keys --force && php-fpm
 
